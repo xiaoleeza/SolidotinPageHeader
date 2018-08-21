@@ -1,0 +1,189 @@
+\documentclass[twoside]{ctexart}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\definecasesmacro}{O{str}mmm}
+ {
+  \cs_new:Npn #2
+   {
+    \int_case:nnF { \value{#1} } { #3 } { #4 }
+   }
+ }
+
+\ExplSyntaxOff
+
+\newcounter{str}
+\definecasesmacro{\solidot}
+  {
+   {0}{Guilty consciences make men cowards.}
+   {1}{做贼心虚。}
+   {2}{Honesty is the best policy.}
+   {3}{做人诚信为本。}
+   {4}{Come what may, heaven won't fall.}
+   {5}{做你的吧，天塌不下来。}
+   {6}{It is too late to grieve when the chance is past.}
+   {7}{坐失良机，后悔已迟。}
+   {8}{God helps those who help themselves.}
+   {9}{自助者天助。}
+   {10}{Confidence in yourself is the first step on the road to success.}
+   {11}{自信是走向成功的第一步。}
+   {12}{Heaven never helps the man who will not act.}
+   {13}{自己不动，叫天何用。}
+   {14}{He is not laughed at that laughs at himself first.}
+   {15}{自嘲者不会让人见笑。}
+   {16}{Give a dog a bad name and hang him.}
+   {17}{众口铄金，积毁销骨。}
+   {18}{It is hard to please all.}
+   {19}{众口难调。}
+   {20}{As a man sows, so he shall reap.}
+   {21}{种瓜得瓜，种豆得豆。}
+   {22}{Content is better than riches.}
+   {23}{知足者常乐.}
+   {24}{A faithful friend is hard to find.}
+   {25}{知音难觅。}
+   {26}{He is lifeless that is faultless.}
+   {27}{只有死人才不犯错误。}
+   {28}{All work and no play makes Jack a dull boy.}
+   {29}{只会用功不玩耍，聪明孩子也变傻。}
+   {30}{It is easier to get money than to keep it.}
+   {31}{挣钱容易攒钱难。}
+   {32}{He is not fit to command others that cannot command himself.}
+   {33}{正人先正己。}
+   {34}{A wise head makes a close mouth.}
+   {35}{真人不露相，露相非真人。}
+   {36}{Choose an author as you choose a friend.}
+   {37}{择书如择友。}
+   {38}{Early to bed and early to rise makes a man healthy, wealthy and wise.}
+   {39}{早睡早起身体好。}
+   {40}{Friends must part.}
+   {41}{再好的朋友也有分手的时候。}
+   {42}{Far water does not put out near fire.}
+   {43}{远水救不了近火。}
+   {44}{Fool's haste is no speed.}
+   {45}{欲速则不达。}
+   {46}{An ounce of prevention is worth a pound of cure.}
+   {47}{预防为主，治疗为辅。}
+   {48}{Doing is better than saying.}
+   {49}{与其挂在嘴上，不如落实在行动上。}
+   {50}{He is a fool that forgets himself.}
+   {51}{愚者忘乎所以。}
+   {52}{Fools learn nothing from wise men, but wise men learn much from fools.}
+   {53}{愚者不学无术，智者不耻下问。}
+   {54}{Custom makes all things easy.}
+   {55}{有个好习惯，事事皆不难。}
+   {56}{Great minds think alike.}
+   {57}{英雄所见略同。}
+   {58}{Great men have great faults.}
+   {59}{英雄犯大错误。}
+   {60}{He sets the fox to keep the geese.}
+   {61}{引狼入室。}
+   {62}{An eye for an eye and a tooth for a tooth.}
+   {63}{以眼还眼，以牙还牙。}
+   {64}{Good for good is natural, good for evil is manly.}
+   {65}{以德报德是常理，以德报怨大丈夫。}
+   {66}{A bad thing never dies.}
+   {67}{遗臭万年。}
+   {68}{A little knowledge is a dangerous thing.}
+   {69}{一知半解，自欺欺人。}
+   {70}{Cannot see the wood for the trees.}
+   {71}{一叶障目，不见泰山。}
+   {72}{A word spoken is past recalling.}
+   {73}{一言既出，驷马难追。}
+   {74}{A man cannot spin and reel at the same time.}
+   {75}{一心不能二用。}
+   {76}{An apple a day keeps the doctor away.}
+   {77}{一天一苹果，医生远离我。}
+   {78}{An hour in the morning is worth two in the evening.}
+   {79}{一日之计在于晨。}
+   {80}{A bird in the hand is worth than two in the bush.}
+   {81}{一鸟在手胜过双鸟在林。}
+   {82}{A year's plan starts with spring.}
+   {83}{一年之计在于春。}
+   {84}{Hasty love, soon cold.}
+   {85}{一见钟情难维久。}
+   {86}{A single flower does not make a spring.}
+   {87}{一花独放不是春百花齐放春满园。}
+   {88}{A man without money is no man at all.}
+   {89}{一分钱难倒英雄汉。}
+   {90}{Faults are thick where love is thin.}
+   {91}{一朝情意淡，样样不顺眼。}
+   {92}{A good book is the best of friends, the same today and forever.}
+   {93}{一本好书，相伴一生。}
+   {94}{If you want knowledge, you must toil for it.}
+   {95}{要想求知，就得吃苦。}
+   {96}{Happy is he who owes nothing.}
+   {97}{要想活得痛快，身上不能背债。}
+   {98}{Far from eye, far from heart.}
+   {99}{眼不见，心不烦。}
+   {100}{Creep before you walk.}
+   {101}{循序渐进。}
+   {102}{Blood is thicker than water.}
+   {103}{血浓于水。}
+   {104}{Complacency is the enemy of study.}
+   {105}{学习的敌人是自己的满足。}
+   {106}{A friend is never known till a man has need.}
+   {107}{需要之时方知友。}
+   {108}{Fools grow without watering.}
+   {109}{朽木不可雕。}
+   {110}{A new broom sweeps clean.}
+   {111}{新官上任三把火。}
+   {112}{Greedy folks have long arms.}
+   {113}{心贪手长。}
+   {114}{A merry heart goes all the way.}
+   {115}{心旷神怡，事事顺利。}
+   {116}{Habit cures habit.}
+   {117}{心病还需心药医。}
+   {118}{Caution is the parent of safety.}
+   {119}{小心驶得万年船。}
+   {120}{A stitch in time saves nine.}
+   {121}{小洞不补，大洞吃苦。}
+   {122}{He who makes no mistakes makes nothing.}
+   {123}{想不犯错误，就一事无成。}
+   {124}{First think and then speak.}
+   {125}{先想后说。}
+   {126}{First come, first served.}
+   {127}{先来后到。}
+   {128}{A joke never gains an enemy but loses a friend.}
+   {129}{戏谑不能化敌为友，只能使人失去朋友。}
+   {130}{Custom is a second nature.}
+   {131}{习惯是后天养成的。}
+   {132}{Happy is the man who learns from the misfortunes of others.}
+   {133}{吸取他人教训，自己才会走运。}
+   {134}{Birds of a feather flock together.}
+   {135}{物以类聚，人以群分。}
+   {136}{Better to ask the way than go astray.}
+   {137}{问路总比迷路好。}
+   {138}{Great hopes make great man.}
+   {139}{伟大的抱负造就伟大的人物。}
+   {140}{It is the first step that costs troublesome.}
+   {141}{万事开头难。}
+   {142}{Be swift to hear, slow to speak.}
+   {143}{听宜敏捷，言宜缓行。}
+   {144}{It is the unforeseen that always happens.}
+   {145}{天有不测风云，人有旦夕祸福。}
+   {146}{All good things come to an end.}
+   {147}{天下没有不散的筵席。}
+   {148}{Justice has long arms.}
+   {149}{天网恢恢，疏而不漏。}
+   {150}{Genius is nothing but labor and diligence.}
+   {151}{天才不过是勤奋而已。}
+   {152}{A fair death honors the whole life.}
+   {153}{死得其所，流芳百世。}
+   {154}{Example is better then percept.}
+   {155}{说一遍，不如做一遍。}
+   {156}{A liar is not believed when he speaks the truth.}
+   {157}{说谎者即使讲真话也没人相信。}
+   {158}{Easier said than done.}
+   {159}{说得容易，做得难。}
+  }
+  {超出范围}
+  
+\newcommand{\solidotcnt}{{\solidot\stepcounter{str}}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}                                                                              
+\lhead{\zihao{5}\solidotcnt} 
+\rhead{\zihao{5}\thepage} 
+\begin{document}
+\newpage 示例文本 \newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本\newpage 示例文本
+\end{document}
